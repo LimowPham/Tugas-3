@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran UKM</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <header>
+        <h1>Formulir Pendaftaran UKM</h1>
+        <nav>
+            <a href="data.html">Data Pendaftar</a>
+            <a href="form.html">Formulir UKM</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Formulir Calon Anggota</h2>
+
+            <form action="#" method="get">
+                <p>
+                    <label for="nama">Nama Lengkap:</label><br>
+                    <input type="text" id="nama" name="nama"
+                           required minlength="3">
+                </p>
+
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"
+                           required>
+                </p>
+
+                <p>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password"
+                           name="password" minlength="8" required>
+                </p>
+
+                <p>
+                    <label for="nim">NIM:</label><br>
+                    <input type="number" id="nim" name="nim"
+                           min="100000" max="99999999" required>
+                </p>
+
+                <p>
+                    <label for="tanggal">Tanggal Lahir:</label><br>
+                    <input type="date" id="tanggal"
+                           name="tanggal_lahir" required>
+                </p>
+
+                <fieldset>
+                    <legend>Jenis Kelamin:</legend>
+                    <input type="radio" id="laki" name="gender"
+                           value="Laki-laki" required>
+                    <label for="laki">Laki-laki</label>
+
+                    <input type="radio" id="perempuan" name="gender"
+                           value="Perempuan">
+                    <label for="perempuan">Perempuan</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Minat Kegiatan UKM:</legend>
+                    <input type="checkbox" id="olahraga"
+                           name="minat[]" value="Olahraga">
+                    <label for="olahraga">Olahraga</label><br>
+
+                    <input type="checkbox" id="musik"
+                           name="minat[]" value="Seni Musik">
+                    <label for="musik">Seni Musik</label><br>
+
+                    <input type="checkbox" id="teknologi"
+                           name="minat[]" value="Teknologi">
+                    <label for="teknologi">Teknologi</label><br>
+
+                    <input type="checkbox" id="fotografi"
+                           name="minat[]" value="Fotografi">
+                    <label for="fotografi">Fotografi</label>
+                </fieldset>
+
+                <p>
+                    <label for="prodi">Program Studi:</label><br>
+                    <select id="prodi" name="prodi" required>
+                        <option value="">-- Pilih Program Studi --</option>
+                        <option value="informatika">Teknik Informatika</option>
+                        <option value="sistem-informasi">Sistem Informasi</option>
+                        <option value="manajemen">Manajemen</option>
+                        <option value="akuntansi">Akuntansi</option>
+                        <option value="hukum">Ilmu Hukum</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="alasan">Alasan Bergabung:</label><br>
+                    <textarea id="alasan" name="alasan"
+                              rows="5" required minlength="10"></textarea>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="persetujuan"
+                           name="persetujuan" required>
+                    <label for="persetujuan">
+                        Saya menyatakan data yang diisi benar.
+                    </label>
+                </p>
+
+                <button type="submit">Kirim</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
